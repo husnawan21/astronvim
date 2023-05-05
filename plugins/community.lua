@@ -9,4 +9,7 @@ return {
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.colorscheme.tokyonight" },
   { import = "astrocommunity.colorscheme.monokai-pro" },
+  { import = "astrocommunity.colorscheme.oxocarbon" },
+  { import = "astrocommunity.colorscheme.rose-pine" },
+  { import = "astrocommunity.colorscheme.nightfox" },
 }

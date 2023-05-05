@@ -35,4 +35,10 @@ return {
       }
     end,
   },
+  {
+    "folke/trouble.nvim",
+    require = "nvim-tree/nvim-web-devicons",
+    config = function() require("trouble").setup {} end,
+    event = "User AstroFile",
+  },
 }
