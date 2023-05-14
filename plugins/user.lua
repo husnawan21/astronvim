@@ -1,44 +1,41 @@
--- TODO: test
 return {
-  -- You can also add new plugins here as well:
-  -- Add plugins, the lazy syntax
-  -- "andweeb/presence.nvim",
+  {
+    "barrett-ruth/live-server.nvim",
+    build = "yarn global add live-server",
+    config = true,
+    event = "User AstroFile",
+  },
+  {
+    "echasnovski/mini.surround",
+    config = function() require("mini.surround").setup() end,
+    event = "User AstroFile",
+    -- version = false
+  },
   -- {
+  --   "ThePrimeagen/vim-be-good",
+  --   event = "User AstroFile",
+  -- },
   --   "ray-x/lsp_signature.nvim",
   --   event = "BufRead",
   --   config = function()
   --     require("lsp_signature").setup()
   --   end,
   -- },
-  {
-    "folke/todo-comments.nvim",
-    requires = "nvim-lua/plenary.nvim",
-    config = function()
-      require("todo-comments").setup {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      }
-    end,
-    -- opts = {},
-    event = "User AstroFile",
-    cmd = { "TodoQuickFix" },
-    keys = {
-      { "<leader>T", "<cmd>TodoTelescope<cr>", desc = "Open TODOs in Telescope" },
-    },
-  },
-  {
-    "loctvl842/monokai-pro.nvim",
-    config = function()
-      require("monokai-pro").setup {
-        filter = "octagon", -- classic | octagon | pro | machine | ristretto | spectrum
-      }
-    end,
-  },
-  {
-    "folke/trouble.nvim",
-    require = "nvim-tree/nvim-web-devicons",
-    config = function() require("trouble").setup {} end,
-    event = "User AstroFile",
-  },
+  -- {
+  --   "folke/todo-comments.nvim",
+  --   dependencies = { "nvim-lua/plenary.nvim" },
+  -- config = function()
+  --   require("todo-comments").setup {
+  --     -- your configuration comes here
+  --     -- or leave it empty to use the default settings
+  --     -- refer to the configuration section below
+  --   }
+  -- end,
+  --   opts = {},
+  --   event = "User AstroFile",
+  --   cmd = { "TodoQuickFix" },
+  --   keys = {
+  --     { "<leader>T", "<cmd>TodoTelescope<cr>", desc = "Open TODOs in Telescope" },
+  --   },
+  -- },
 }
